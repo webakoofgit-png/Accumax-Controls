@@ -1,22 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
 import { company } from "@/data/site";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact Us — Accumax Controls Pvt. Ltd." },
-      { name: "description", content: "Call +91 9920177441, email info@accumaxcontrols.com or send an enquiry to Accumax Controls, Kothrud, Pune." },
-      { property: "og:title", content: "Contact Accumax Controls" },
-      { property: "og:description", content: "Send an enquiry to our engineering team in Pune, India." },
-    ],
-  }),
-  component: Contact,
-});
-
-function Contact() {
+export function Contact() {
   const cards: { icon: typeof Phone; t: string; lines: { l: string; href?: string | undefined }[] }[] = [
     { icon: Phone, t: "Call us", lines: company.phones.map((p, i) => ({ l: p, href: company.phoneLinks[i] ?? "" })) },
     { icon: Mail, t: "Email", lines: [{ l: company.email, href: `mailto:${company.email}` }] },

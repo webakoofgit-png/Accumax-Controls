@@ -1,23 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@/lib/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowUpRight, CheckCircle2, FileText, HardHat, Phone, Quote, ShieldCheck } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/site/Reveal";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
 import { clients, company, industries, intro, services, serviceThumbs, stats, testimonials, whoWeAre, whyChoose } from "@/data/site";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Accumax Controls Pvt. Ltd. — Control Center of Engineering Excellence" },
-      { name: "description", content: "EPC, substation testing & commissioning, GIS erection, SCADA & relay testing, solar & EV stations and exports for the energy sector. Pune, India." },
-      { property: "og:title", content: "Accumax Controls Pvt. Ltd. — Engineering Excellence for the Energy Sector" },
-      { property: "og:description", content: "GIS, AIS, SAS, solar, EV stations, substation civil & electrical works, testing & commissioning, and exports." },
-    ],
-  }),
-  component: Home,
-});
-
-function Home() {
+export function Home() {
   return (
     <>
       <Hero />

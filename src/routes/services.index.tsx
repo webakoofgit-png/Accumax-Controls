@@ -1,22 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@/lib/navigation";
 import { ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { company, services, serviceThumbs } from "@/data/site";
 
-export const Route = createFileRoute("/services/")({
-  head: () => ({
-    meta: [
-      { title: "Services — Accumax Controls Pvt. Ltd." },
-      { name: "description", content: "EPC projects, SCADA & relay testing, exports, substation T&C, fabrication & civil, GIS erection & supervision, solar & EV stations and trading." },
-      { property: "og:title", content: "Engineering Services — Accumax Controls" },
-      { property: "og:description", content: "Eight service lines covering the full life cycle of power sector projects." },
-    ],
-  }),
-  component: ServicesPage,
-});
-
-function ServicesPage() {
+export function ServicesPage() {
   return (
     <>
       <PageHero eyebrow="Our services" title="Engineering services for the energy sector" image={company.aboutImage} crumb="Services" />

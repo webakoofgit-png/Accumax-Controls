@@ -1,21 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@/lib/navigation";
 import { ArrowRight, FileText } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { company, panelCleaning } from "@/data/site";
 
-export const Route = createFileRoute("/live-panel-cleaning")({
-  head: () => ({
-    meta: [
-      { title: "Live Panel Cleaning — Accumax Controls Pvt. Ltd." },
-      { name: "description", content: "Live solar panel cleaning: a non-disruptive technique that maximises output without shutting the system down." },
-      { property: "og:title", content: "Live Solar Panel Cleaning — Accumax Controls" },
-      { property: "og:description", content: "Clean panels while in operation — no power loss, longer system life." },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
+export function Page() {
   return (
     <>
       <PageHero eyebrow="Service" title="Live Panel Cleaning" image={panelCleaning.image} crumb="Live Panel Cleaning" />

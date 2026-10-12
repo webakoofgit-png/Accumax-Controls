@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "@/lib/navigation";
 import { ChevronRight } from "lucide-react";
 
 export function PageHero({ title, eyebrow, image, crumb }: { title: string; eyebrow: string; image: string; crumb: string }) {

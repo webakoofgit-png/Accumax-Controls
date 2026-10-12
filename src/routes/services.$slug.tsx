@@ -1,32 +1,9 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { Link } from "@/lib/navigation";
 import { ArrowRight, Mail, Phone } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
 import { company, services, type ServiceBlock } from "@/data/site";
-
-export const Route = createFileRoute("/services/$slug")({
-  loader: ({ params }) => {
-    const service = services.find((s) => s.slug === params.slug);
-    if (!service) throw notFound();
-    return { service };
-  },
-  head: ({ loaderData }) => {
-    const s = loaderData?.service;
-    const title = s ? `${s.name} — Accumax Controls Pvt. Ltd.` : "Service — Accumax Controls";
-    const desc = s?.intro[0]?.slice(0, 155) ?? "Accumax Controls service";
-    return {
-      meta: [
-        { title },
-        { name: "description", content: desc },
-        { property: "og:title", content: title },
-        { property: "og:description", content: desc },
-        ...(s ? [{ property: "og:image", content: s.image }, { name: "twitter:image", content: s.image }] : []),
-      ],
-    };
-  },
-  component: ServicePage,
-});
 
 function Blocks({ body }: { body: ServiceBlock[] }) {
   return (
@@ -56,8 +33,12 @@ function Blocks({ body }: { body: ServiceBlock[] }) {
   );
 }
 
-function ServicePage() {
-  const { service } = Route.useLoaderData();
+export function ServicePage({ slug }: { slug: string }) {
+  const service = services.find((s) => s.slug === slug);
+
+  if (!service) {
+    return <ServiceNotFound />;
+  }
   return (
     <>
       <PageHero eyebrow="Service" title={service.name} image={service.image} crumb={service.name} />
@@ -95,6 +76,24 @@ function ServicePage() {
               <a href={`mailto:${company.email}`} className="mt-3 flex items-center gap-2 text-sm hover:text-ink-foreground"><Mail className="h-4 w-4 text-amber" />{company.email}</a>
             </div>
           </aside>
+        </div>
+      </section>
+    </>
+  );
+}
+
+function ServiceNotFound() {
+  return (
+    <>
+      <PageHero eyebrow="Service" title="Service not found" image={company.aboutImage} crumb="Service" />
+      <section className="py-20">
+        <div className="container-x">
+          <div className="rounded-lg border bg-card p-8 shadow-card">
+            <h1 className="text-2xl font-extrabold">This service page does not exist.</h1>
+            <Link to="/services" className="mt-6 inline-flex items-center gap-2 rounded bg-gradient-ember px-6 py-3 font-bold text-primary-foreground">
+              View all services <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
     </>

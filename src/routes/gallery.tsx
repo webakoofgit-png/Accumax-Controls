@@ -1,23 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { X } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionHeading } from "@/components/site/Reveal";
 import { gallery, videos } from "@/data/site";
 
-export const Route = createFileRoute("/gallery")({
-  head: () => ({
-    meta: [
-      { title: "Gallery — Accumax Controls Pvt. Ltd." },
-      { name: "description", content: "Photos and videos from Accumax Controls substation, GIS, solar and commissioning projects." },
-      { property: "og:title", content: "Project Gallery — Accumax Controls" },
-      { property: "og:description", content: "Images and videos from our project sites." },
-    ],
-  }),
-  component: Gallery,
-});
-
-function Gallery() {
+export function Gallery() {
   const [open, setOpen] = useState<string | null>(null);
   return (
     <>

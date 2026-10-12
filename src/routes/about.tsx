@@ -1,22 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@/lib/navigation";
 import { ArrowRight, Eye, FileText, ShieldCheck, Target } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal, SectionHeading } from "@/components/site/Reveal";
 import { about, company, whoWeAre } from "@/data/site";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Us — Accumax Controls Pvt. Ltd." },
-      { name: "description", content: "Accumax Controls delivers end-to-end GIS, AIS, EV charging, solar, SAS, AMC and E-House solutions, plus testing and commissioning across all voltage levels." },
-      { property: "og:title", content: "About Accumax Controls Pvt. Ltd." },
-      { property: "og:description", content: "Our story, mission, vision and team — engineering and exports for the power sector." },
-    ],
-  }),
-  component: About,
-});
-
-function About() {
+export function About() {
   return (
     <>
       <PageHero eyebrow="About us" title="At the forefront of power sector engineering" image={company.aboutImage} crumb="About Us" />

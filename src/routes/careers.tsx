@@ -1,21 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
 import { about, company } from "@/data/site";
 
-export const Route = createFileRoute("/careers")({
-  head: () => ({
-    meta: [
-      { title: "Career — Accumax Controls Pvt. Ltd." },
-      { name: "description", content: "Join the Accumax Controls field and engineering team working across GIS, AIS, SAS and renewable energy projects." },
-      { property: "og:title", content: "Careers at Accumax Controls" },
-      { property: "og:description", content: "Apply to join our field and engineering team." },
-    ],
-  }),
-  component: Careers,
-});
-
-function Careers() {
+export function Careers() {
   return (
     <>
       <PageHero eyebrow="Career" title="Build the power infrastructure of tomorrow" image={about.team[1]!.image} crumb="Career" />

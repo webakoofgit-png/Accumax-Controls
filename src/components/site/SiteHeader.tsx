@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "@/lib/navigation";
 import { useEffect, useState } from "react";
 import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
 import { company, services } from "@/data/site";
