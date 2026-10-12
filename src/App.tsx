@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { legacyRedirects } from "@/data/site";
 import { Link } from "@/lib/navigation";
 import { About } from "@/routes/about";
+import { AdminPanel } from "@/routes/admin";
 import { Careers } from "@/routes/careers";
 import { Contact } from "@/routes/contact";
 import { Gallery } from "@/routes/gallery";
@@ -59,6 +60,7 @@ export function App() {
 
   const page = useMemo(() => {
     if (pathname === "/") return <Home />;
+    if (pathname === "/admin") return <AdminPanel />;
     if (pathname === "/about") return <About />;
     if (pathname === "/services") return <ServicesPage />;
     if (pathname === "/live-panel-cleaning") return <LivePanelCleaning />;

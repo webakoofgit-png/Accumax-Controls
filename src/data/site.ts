@@ -1,4 +1,5 @@
 import servicesJson from "./services.json";
+import { getAdminContent } from "./adminContent";
 
 const REMOTE_SRC = "https://www.accumaxcontrols.com";
 export const asset = (p: string) => `/${p}`;
@@ -13,7 +14,10 @@ export type Service = {
   sections: { h: string; body: ServiceBlock[] }[];
 };
 
-export const company = {
+const adminContent = getAdminContent();
+const phoneToLink = (phone: string) => `tel:${phone.replace(/[^\d+]/g, "")}`;
+
+const defaultCompany = {
   name: "Accumax Controls Pvt. Ltd.",
   tagline: "Control Center of Engineering Excellence",
   email: "info@accumaxcontrols.com",
@@ -34,9 +38,36 @@ export const company = {
   processImage: asset("assets/img/process.png"),
 };
 
-export const services = servicesJson as Service[];
+export const company = {
+  ...defaultCompany,
+  ...adminContent.company,
+  name: defaultCompany.name,
+  logo: defaultCompany.logo,
+  visionPdf: defaultCompany.visionPdf,
+  ehsPdf: defaultCompany.ehsPdf,
+  panelCleaningPdf: defaultCompany.panelCleaningPdf,
+  heroVideo: defaultCompany.heroVideo,
+  whyVideo: defaultCompany.whyVideo,
+  aboutImage: defaultCompany.aboutImage,
+  processImage: defaultCompany.processImage,
+  phones: adminContent.company?.phones?.filter(Boolean) ?? defaultCompany.phones,
+  phoneLinks: (adminContent.company?.phones?.filter(Boolean) ?? defaultCompany.phones).map(phoneToLink),
+};
 
-export const serviceThumbs: Record<string, string> = {
+const baseServices = servicesJson as Service[];
+const serviceOverrides = new Map((adminContent.services ?? []).map((s) => [s.slug, s]));
+export const services = baseServices.map((service) => {
+  const override = serviceOverrides.get(service.slug);
+  if (!override) return service;
+  return {
+    ...service,
+    name: override.name || service.name,
+    image: override.image || service.image,
+    intro: override.intro?.length ? override.intro : service.intro,
+  };
+});
+
+const defaultServiceThumbs: Record<string, string> = {
   "epc-projects": asset("assets/img/products/substation-t-and-c.jpg"),
   "scada-relay-testing": asset("assets/img/products/scada-and-relay-testing.jpg"),
   "export-projects": asset("assets/img/products/export-projects.jpg"),
@@ -47,8 +78,14 @@ export const serviceThumbs: Record<string, string> = {
   trading: asset("assets/img/products/trading.jpg"),
 };
 
-export const intro =
+export const serviceThumbs: Record<string, string> = Object.fromEntries(
+  Object.entries(defaultServiceThumbs).map(([slug, image]) => [slug, serviceOverrides.get(slug)?.image || image]),
+);
+
+const defaultIntro =
   "Accumax Controls Pvt. Ltd. is a leading exports, engineering, and technology company specializing in the energy sector. We excel in GIS, AIS, EV stations, solar, substation civil & electrical works, SAS, AMC, E-House solutions, and testing & commissioning of all voltage level systems. Our expertise also includes system audits, relay programming, and protection setting calculations. As a trusted exporter, we provide technical expertise, testing kits, all types of substation equipment, construction tools, building materials, and FRP products. We also export electrical panels, end termination material, trays, support and fasteners, light fittings, cables and lighting poles.";
+
+export const intro = adminContent.intro || defaultIntro;
 
 export const whoWeAre = [
   "Providing products and services of highest quality standards with safest conditions",
@@ -61,12 +98,14 @@ export const whoWeAre = [
   "Well supported by associate companies and subcontractor network",
 ];
 
-export const stats = [
+const defaultStats = [
   { value: 100, label: "Projects Done" },
   { value: 276, label: "Happy Clients" },
   { value: 60, label: "Experienced Staff" },
   { value: 2, label: "Win Awards" },
-];
+ ];
+
+export const stats = adminContent.stats?.length ? adminContent.stats : defaultStats;
 
 const ind = (n: string, i: number) => ({ name: n, image: asset(`assets/img/portfolio/i${i}.jpg`) });
 export const industries = [
@@ -83,10 +122,12 @@ export const testimonials = [
   { quote: "Excellent service and really quick delivery. It's so hard to find quality products, so will definitely be ordering from here again.", name: "Aniruddha Roy", city: "Pune" },
 ];
 
-export const whyChoose =
+const defaultWhyChoose =
   "With sincere efforts, we have achieved rating from the Biggest Rating Agency – CRISIL (A Standard & Poors Company). Below mentioned are some of our strengths highlighted after the research carried out by CRISIL, under the scheme of NSIC.";
 
-export const about = {
+export const whyChoose = adminContent.whyChoose || defaultWhyChoose;
+
+const defaultAbout = {
   paragraphs: [
     "Accumax Controls Pvt. Ltd. stands at the forefront of engineering, exports, and technological innovation, with a specialized focus on the power sector. Renowned for our comprehensive capabilities, we deliver end-to-end solutions in Gas Insulated Substations (GIS), Air Insulated Substations (AIS), Electric Vehicle (EV) charging infrastructure, Solar Project and complete substation civil and electrical works. Our proficiency extends to Substation Automation Systems (SAS), Annual Maintenance Contracts (AMC), and cutting-edge E-House solutions.",
     "In addition, we offer expert services in testing and commissioning across all voltage levels, ensuring seamless integration and reliable performance. Our team excels in conducting thorough system audits, programming protective relays, and performing precise protection setting calculations to enhance operational safety and efficiency.",
@@ -102,16 +143,27 @@ export const about = {
   ],
 };
 
-export const gallery = [3, 4, 5, 9, 12, 13, 14, 15, 16, 20, 21].map((n) => asset(`assets/img/gallery/${n}.jpg`));
-export const videos = [1, 2, 3, 4, 5].map((n) => remoteAsset(`${n}.mp4`));
+export const about = {
+  ...defaultAbout,
+  ...adminContent.about,
+  team: defaultAbout.team,
+  paragraphs: adminContent.about?.paragraphs?.filter(Boolean).length ? adminContent.about.paragraphs.filter(Boolean) : defaultAbout.paragraphs,
+};
 
-export const panelCleaning = {
+const defaultGallery = [3, 4, 5, 9, 12, 13, 14, 15, 16, 20, 21].map((n) => asset(`assets/img/gallery/${n}.jpg`));
+const defaultVideos = [1, 2, 3, 4, 5].map((n) => remoteAsset(`${n}.mp4`));
+export const gallery = adminContent.gallery?.filter(Boolean).length ? adminContent.gallery.filter(Boolean) : defaultGallery;
+export const videos = adminContent.videos?.filter(Boolean).length ? adminContent.videos.filter(Boolean) : defaultVideos;
+
+const defaultPanelCleaning = {
   image: asset("assets/img/about/live.png"),
   intro:
     "Solar panels would be a long-term investment in clean energy and would deliver the expected results. Dust, dirt, and debris have been known to gradually block the panels from operating optimally. Live solar panel cleaning is an advanced non-disruptive technique that helps in maximizing operational performance of panels without subjecting the system to shut down.",
   whyTitle: "Why Live Solar Panel Cleaning is Critical?",
   why: "Live cleaning solves the challenge by allowing the cleaning of the panels while in operation. Power losses are totally avoided while maximizing energy production with increased life cycle for the solar system.",
 };
+
+export const panelCleaning = { ...defaultPanelCleaning, ...adminContent.panelCleaning };
 
 export const legacyRedirects: Record<string, string> = {
   "index.php": "/",
