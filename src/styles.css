@@ -88,6 +88,14 @@
     -webkit-font-smoothing: antialiased;
   }
   h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  main :where(p, li, blockquote),
+  footer :where(p, li) {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  :where(.text-center, .text-center *, .font-display, .font-mono, .eyebrow, button, a) {
+    text-align: inherit;
+  }
   ::selection { background: var(--ember); color: var(--primary-foreground); }
 }
 
