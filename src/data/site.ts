@@ -56,16 +56,30 @@ export const company = {
 
 const baseServices = servicesJson as Service[];
 const serviceOverrides = new Map((adminContent.services ?? []).map((s) => [s.slug, s]));
-export const services = baseServices.map((service) => {
-  const override = serviceOverrides.get(service.slug);
-  if (!override) return service;
-  return {
-    ...service,
-    name: override.name || service.name,
-    image: override.image || service.image,
-    intro: override.intro?.length ? override.intro : service.intro,
-  };
-});
+const hiddenServiceSlugs = new Set(adminContent.hiddenServiceSlugs ?? []);
+const baseServiceSlugs = new Set(baseServices.map((service) => service.slug));
+const editedBaseServices = baseServices
+  .filter((service) => !hiddenServiceSlugs.has(service.slug))
+  .map((service) => {
+    const override = serviceOverrides.get(service.slug);
+    if (!override) return service;
+    return {
+      ...service,
+      name: override.name || service.name,
+      image: override.image || service.image,
+      intro: override.intro?.length ? override.intro : service.intro,
+    };
+  });
+const adminAddedServices = (adminContent.services ?? [])
+  .filter((service) => !baseServiceSlugs.has(service.slug) && !hiddenServiceSlugs.has(service.slug))
+  .map((service) => ({
+    slug: service.slug,
+    name: service.name,
+    image: service.image,
+    intro: service.intro?.length ? service.intro : ["Add service details from the admin panel."],
+    sections: [],
+  }));
+export const services = [...editedBaseServices, ...adminAddedServices];
 
 const defaultServiceThumbs: Record<string, string> = {
   "epc-projects": asset("assets/img/products/substation-t-and-c.jpg"),
@@ -79,7 +93,7 @@ const defaultServiceThumbs: Record<string, string> = {
 };
 
 export const serviceThumbs: Record<string, string> = Object.fromEntries(
-  Object.entries(defaultServiceThumbs).map(([slug, image]) => [slug, serviceOverrides.get(slug)?.image || image]),
+  services.map((service) => [service.slug, serviceOverrides.get(service.slug)?.image || defaultServiceThumbs[service.slug] || service.image]),
 );
 
 const defaultIntro =

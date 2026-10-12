@@ -30,6 +30,7 @@ function initialContent(): Required<AdminContent> {
       image: service.image,
       intro: service.intro,
     })),
+    hiddenServiceSlugs: [],
     about: {
       paragraphs: about.paragraphs,
       mission: about.mission,
@@ -161,11 +162,23 @@ export function AdminPanel() {
 
             {active === "services" && (
               <Panel title={`Services (${serviceCount})`}>
+                <button
+                  onClick={() => addService(content, update)}
+                  className="inline-flex items-center rounded bg-gradient-ember px-4 py-2.5 text-sm font-bold text-primary-foreground shadow-ember"
+                >
+                  Add Service
+                </button>
                 <div className="space-y-5">
                   {content.services.map((service, index) => (
                     <div key={service.slug} className="rounded-lg border bg-card p-4">
-                      <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">{service.slug}</p>
+                      <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
+                        <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">{service.slug}</p>
+                        <button onClick={() => removeService(index, content, update)} className="rounded border px-3 py-2 text-xs font-bold text-destructive hover:border-destructive">
+                          Remove
+                        </button>
+                      </div>
                       <div className="mt-4 grid gap-4 lg:grid-cols-2">
+                        <Field label="Slug" value={service.slug} onChange={(value) => updateService(index, { slug: slugify(value) }, content, update)} />
                         <Field label="Service name" value={service.name} onChange={(value) => updateService(index, { name: value }, content, update)} />
                         <Field label="Image URL" value={service.image} onChange={(value) => updateService(index, { image: value }, content, update)} />
                       </div>
@@ -261,6 +274,14 @@ function AdminLogin({ onLogin }: { onLogin: () => void }) {
   );
 }
 
+function slugify(value: string) {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 function updateStat<K extends keyof Required<AdminContent>["stats"][number]>(
   index: number,
   key: K,
@@ -271,6 +292,34 @@ function updateStat<K extends keyof Required<AdminContent>["stats"][number]>(
   const next = [...content.stats];
   next[index] = { ...next[index]!, [key]: value };
   update("stats", next);
+}
+
+function addService(
+  content: Required<AdminContent>,
+  update: <T extends keyof Required<AdminContent>>(key: T, value: Required<AdminContent>[T]) => void,
+) {
+  const nextNumber = content.services.length + 1;
+  const slug = `new-service-${nextNumber}`;
+  update("services", [
+    ...content.services,
+    {
+      slug,
+      name: `New Service ${nextNumber}`,
+      image: "/assets/img/service/epc.jpg",
+      intro: ["Write the service introduction here."],
+    },
+  ]);
+}
+
+function removeService(
+  index: number,
+  content: Required<AdminContent>,
+  update: <T extends keyof Required<AdminContent>>(key: T, value: Required<AdminContent>[T]) => void,
+) {
+  const service = content.services[index];
+  if (!service) return;
+  update("hiddenServiceSlugs", [...new Set([...content.hiddenServiceSlugs, service.slug])]);
+  update("services", content.services.filter((_, serviceIndex) => serviceIndex !== index));
 }
 
 function updateService(

@@ -15,6 +15,7 @@ export type AdminContent = {
   whyChoose?: string;
   stats?: { value: number; label: string }[];
   services?: Pick<Service, "slug" | "name" | "image" | "intro">[];
+  hiddenServiceSlugs?: string[];
   about?: {
     paragraphs?: string[];
     mission?: string;
