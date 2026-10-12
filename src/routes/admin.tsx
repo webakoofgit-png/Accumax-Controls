@@ -2,7 +2,11 @@ import { clearAdminContent, saveAdminContent, type AdminContent } from "@/data/a
 import { about, company, gallery, intro, panelCleaning, services, stats, videos, whyChoose } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { ExternalLink, RotateCcw, Save, Settings2 } from "lucide-react";
-import { useMemo, useState, type ReactNode } from "react";
+import { useMemo, useState, type FormEvent, type ReactNode } from "react";
+
+const ADMIN_USERNAME = "admin";
+const ADMIN_PASSWORD = "admin@123";
+const ADMIN_SESSION_KEY = "accumax-admin-session";
 
 const lines = (items: string[]) => items.join("\n");
 const splitLines = (value: string) => value.split("\n").map((item) => item.trim()).filter(Boolean);
@@ -54,11 +58,16 @@ const sections: { id: Section; label: string }[] = [
 ];
 
 export function AdminPanel() {
+  const [isLoggedIn, setIsLoggedIn] = useState(() => window.localStorage.getItem(ADMIN_SESSION_KEY) === "active");
   const [active, setActive] = useState<Section>("company");
   const [content, setContent] = useState<Required<AdminContent>>(() => initialContent());
   const [saved, setSaved] = useState(false);
 
   const serviceCount = useMemo(() => content.services.length, [content.services.length]);
+
+  if (!isLoggedIn) {
+    return <AdminLogin onLogin={() => setIsLoggedIn(true)} />;
+  }
 
   const update = <K extends keyof Required<AdminContent>>(key: K, value: Required<AdminContent>[K]) => {
     setContent((current) => ({ ...current, [key]: value }));
@@ -75,6 +84,11 @@ export function AdminPanel() {
     window.location.reload();
   };
 
+  const logout = () => {
+    window.localStorage.removeItem(ADMIN_SESSION_KEY);
+    setIsLoggedIn(false);
+  };
+
   return (
     <section className="bg-secondary py-10 md:py-14">
       <div className="container-x">
@@ -87,6 +101,9 @@ export function AdminPanel() {
             <a href="/" className="inline-flex items-center gap-2 rounded border bg-card px-4 py-3 text-sm font-bold shadow-card hover:border-primary">
               Website <ExternalLink className="h-4 w-4" />
             </a>
+            <button onClick={logout} className="inline-flex items-center gap-2 rounded border bg-card px-4 py-3 text-sm font-bold shadow-card hover:border-primary">
+              Logout
+            </button>
             <button onClick={reset} className="inline-flex items-center gap-2 rounded border bg-card px-4 py-3 text-sm font-bold shadow-card hover:border-primary">
               Reset <RotateCcw className="h-4 w-4" />
             </button>
@@ -184,6 +201,61 @@ export function AdminPanel() {
             )}
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function AdminLogin({ onLogin }: { onLogin: () => void }) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const submit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+      window.localStorage.setItem(ADMIN_SESSION_KEY, "active");
+      onLogin();
+      return;
+    }
+    setError("Wrong username or password.");
+  };
+
+  return (
+    <section className="grid min-h-[78vh] place-items-center bg-secondary px-4 py-16">
+      <div className="w-full max-w-xl rounded-lg border bg-background p-6 shadow-lift md:p-8">
+        <span className="eyebrow">Admin login</span>
+        <h1 className="mt-4 text-4xl font-black">Website admin panel</h1>
+        <div className="mt-6 rounded border bg-card p-4">
+          <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Dummy credentials</p>
+          <div className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
+            <div className="rounded bg-secondary p-3">
+              <p className="font-semibold text-muted-foreground">Username</p>
+              <p className="mt-1 font-mono text-lg font-bold">{ADMIN_USERNAME}</p>
+            </div>
+            <div className="rounded bg-secondary p-3">
+              <p className="font-semibold text-muted-foreground">Password</p>
+              <p className="mt-1 font-mono text-lg font-bold">{ADMIN_PASSWORD}</p>
+            </div>
+          </div>
+        </div>
+
+        <form onSubmit={submit} className="mt-6 space-y-4">
+          <Field label="Username" value={username} onChange={setUsername} />
+          <label className="block">
+            <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Password</span>
+            <input
+              type="password"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              className="mt-2 w-full rounded border bg-card px-3 py-2.5 text-sm outline-none focus:border-primary"
+            />
+          </label>
+          {error && <p className="rounded border border-destructive/30 bg-destructive/10 px-3 py-2 text-sm font-bold text-destructive">{error}</p>}
+          <button className="inline-flex w-full items-center justify-center rounded bg-gradient-ember px-5 py-3 text-sm font-bold text-primary-foreground shadow-ember">
+            Login
+          </button>
+        </form>
       </div>
     </section>
   );
