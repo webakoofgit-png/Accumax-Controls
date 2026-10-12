@@ -1,0 +1,648 @@
+[
+ {
+  "slug": "epc-projects",
+  "name": "EPC Projects",
+  "image": "/assets/img/service/epc.jpg",
+  "intro": [
+   "Modern-day infrastructure development boils down to more than just EPC (Engineering, Procurement, and Construction) projects. It probably is a very simplistic but effective method of getting work done. In fact, almost every modern day project of any kind has all design, material sourcing, and construction into a single and one-line contract with the cost-effectiveness and efficiency that are mostly associated with a specific industry such as energy, oil &, gas, power generation, and infrastructure."
+  ],
+  "sections": [
+   {
+    "h": "Why EPC Projects Shine",
+    "body": [
+     {
+      "h4": "Turnkey Solution"
+     },
+     {
+      "p": "An EPC work delivers completion by handover of the whole ready-to-use facility. Initial design and laying are the responsibilities of the contractor, allowing project owners to keep their focus on operations rather than construction complexity."
+     },
+     {
+      "h4": "Cost & Time Efficiency"
+     },
+     {
+      "p": "With the bundling of engineering, procurement, and construction into one contract, EPC projects minimize delays and cost overruns. Because of a single point of responsibility, easy coordination is achieved, thus reducing the risks of fragmented project implementation."
+     },
+     {
+      "h4": "Quality Assurance & Compliance"
+     },
+     {
+      "p": "With a well-structured approach, the EPC contracts demand compliance with international standards and regulations for the projects. The contractor is also responsible for quality control, ensuring that projects achieve compliance with safety and performance benchmarks."
+     },
+     {
+      "h4": "Risk Transfer"
+     },
+     {
+      "p": "The risk of the project is transferred to the contractor under the EPC contract from the owner. This leads the contractor to optimize resources, reduce risks, and deliver projects on time, with no economic or operational risks to stakeholders."
+     },
+     {
+      "h4": "Innovation & Sustainability"
+     },
+     {
+      "p": "Modern EPC projects use the latest technologies, ranging from digital twin modeling to AI-driven project management and sustainable engineering practices. Green solutions help to mitigate carbon footprints for a long-term perspective."
+     }
+    ]
+   },
+   {
+    "h": "Where EPC Projects Are Applied",
+    "body": [
+     {
+      "li": [
+       "Data Centers and Industrial Setups: DC buildings, substations, automobiles, mines, healthcare, and pharma sectors",
+       "Oil & Gas: Refineries, pipelines, and offshore platforms",
+       "Power Generation: Renewable energy plants, thermal power stations, and substations",
+       "Infrastructure Development: Metro rail, roads, process plants, airports, and water treatment plants"
+      ]
+     },
+     {
+      "p": "EPC, or Engineering Procurement Construction, is a structured methodology to develop large-scale industrial and infrastructure projects efficiently while containing risk. This single-source responsibility model provides operational efficiency and cost savings while ensuring high standards in project execution. EPC remains the preferred model for delivering industrial and infrastructure projects with excellence well into the future."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "scada-relay-testing",
+  "name": "SCADA & Relay Testing",
+  "image": "/assets/img/service/scada.jpg",
+  "intro": [
+   "The contribution of SCADA systems and relay testing to reliability, efficiency, and safety in power systems cannot possibly be overstated in this digital age. These have created the basis for current smart and resilient electrical networks-from industrial automation applications right through to power grid protection."
+  ],
+  "sections": [
+   {
+    "h": "SCADA: The Brain Behind Substation Automation",
+    "body": [
+     {
+      "p": "SCADA brings together the whole technique of real-time monitoring and control of industrial processes. It collects data through the connected software and hardware, analyses the system performance, and permits remote operation."
+     },
+     {
+      "h4": "Benefits of SCADA"
+     },
+     {
+      "li": [
+       "Real-time Monitoring:"
+      ]
+     },
+     {
+      "p": "Tracks and controls electric grids, water treatment plants, oil refineries, and more — all at once, in real-time."
+     },
+     {
+      "li": [
+       "More Efficiency:"
+      ]
+     },
+     {
+      "p": "Minimizes downtime, enhancing predictive and analytical efficiency across operations."
+     },
+     {
+      "li": [
+       "Remote Accessibility:"
+      ]
+     },
+     {
+      "p": "Enables engineers to control and manage systems from any geographic location with ease."
+     },
+     {
+      "li": [
+       "Fault Detection and Prevention:"
+      ]
+     },
+     {
+      "p": "Identifies issues like potholes early and prevents them from escalating into major system failures."
+     },
+     {
+      "h4": "SCADA for Power Systems"
+     },
+     {
+      "p": "Using SCADA in an industrial electrical grid allows to higher monitoring voltages, fault detection, and substation management. It provides utilities a benefit in being able to quickly respond on occasions of power disturbances."
+     },
+     {
+      "h4": "Relay Testing: Assurance of Electrical Protection"
+     },
+     {
+      "p": "Protection relays are considered more important for the protection of electrical equipment from faults, overloads, and short circuits. Relay testing guarantees the proper functioning of these protective devices and hence prevents a catastrophic failure."
+     }
+    ]
+   },
+   {
+    "h": "Significant Aspects of Relay Testing",
+    "body": [
+     {
+      "li": [
+       "Data Centers and Industrial Setups:"
+      ]
+     },
+     {
+      "p": "DC buildings, substations, automobiles, mines, healthcare, and pharma sectors"
+     },
+     {
+      "li": [
+       "Oil & Gas:"
+      ]
+     },
+     {
+      "p": "Refineries, pipelines, and offshore platforms"
+     },
+     {
+      "li": [
+       "Power Generation:"
+      ]
+     },
+     {
+      "p": "Renewable energy plants, thermal power stations, and substations"
+     },
+     {
+      "li": [
+       "Infrastructure Development:"
+      ]
+     },
+     {
+      "p": "Metro rail, roads, process plants, airports, and water treatment plants"
+     }
+    ]
+   },
+   {
+    "h": "Relay Tests: Types",
+    "body": [
+     {
+      "li": [
+       "Primary Injection Testing: Evaluates the overall performance of the system by injecting high current directly into it.",
+       "Secondary Injection Testing: Tests relays using simulated signals to verify their functionality.",
+       "End-to-End Testing: Assesses the complete protection scheme across multiple site locations to ensure system coordination and reliability."
+      ]
+     },
+     {
+      "p": "SCADA and relay testing is the association that makes stable, efficient power systems and also secure power systems. SCADA enhances the ability of remote monitoring and control, while relay testing ensures that there is integrity with the protective mechanisms. Together, they form the basis for industrial automation and the reliability of power grids so that efficiency and safety can exist in today's advanced infrastructures."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "export-projects",
+  "name": "Export Projects",
+  "image": "/assets/img/service/export.jpg",
+  "intro": [
+   "Modern-day infrastructure development boils down to more than just EPC (Engineering, Procurement, and Construction) projects. It probably is a very simplistic but effective method of getting work done. In fact, almost every modern day project of any kind has all design, material sourcing, and construction into a single and one-line contract with the cost-effectiveness and efficiency that are mostly associated with a specific industry such as energy, oil &, gas, power generation, and infrastructure."
+  ],
+  "sections": [
+   {
+    "h": "Why Export Projects Shine",
+    "body": [
+     {
+      "h4": "Turnkey Solution"
+     },
+     {
+      "p": "An EPC work delivers completion by handover of the whole ready-to-use facility. Initial design and laying are the responsibilities of the contractor, allowing project owners to keep their focus on operations rather than construction complexity."
+     },
+     {
+      "h4": "Cost & Time Efficiency"
+     },
+     {
+      "p": "With the bundling of engineering, procurement, and construction into one contract, Export Projects"
+     },
+     {
+      "p": "minimize delays and cost overruns. Because of a single point of responsibility, easy coordination is achieved, thus reducing the risks of fragmented project implementation."
+     },
+     {
+      "h4": "Quality Assurance & Compliance"
+     },
+     {
+      "p": "With a well-structured approach, the EPC contracts demand compliance with international standards and regulations for the projects. The contractor is also responsible for quality control, ensuring that projects achieve compliance with safety and performance benchmarks."
+     },
+     {
+      "h4": "Risk Transfer"
+     },
+     {
+      "p": "The risk of the project is transferred to the contractor under the EPC contract from the owner. This leads the contractor to optimize resources, reduce risks, and deliver projects on time, with no economic or operational risks to stakeholders."
+     },
+     {
+      "h4": "Innovation & Sustainability"
+     },
+     {
+      "p": "Modern Export Projects"
+     },
+     {
+      "p": "use the latest technologies, ranging from digital twin modeling to AI-driven project management and sustainable engineering practices. Green solutions help to mitigate carbon footprints for a long-term perspective."
+     }
+    ]
+   },
+   {
+    "h": "Where Export Projects Are Applied",
+    "body": [
+     {
+      "li": [
+       "Data Centers and Industrial Setups: DC buildings, substations, automobiles, mines, healthcare, and pharma sectors",
+       "Oil & Gas: Refineries, pipelines, and offshore platforms",
+       "Power Generation: Renewable energy plants, thermal power stations, and substations",
+       "Infrastructure Development: Metro rail, roads, process plants, airports, and water treatment plants"
+      ]
+     },
+     {
+      "p": "EPC, or Engineering Procurement Construction, is a structured methodology to develop large-scale industrial and infrastructure projects efficiently while containing risk. This single-source responsibility model provides operational efficiency and cost savings while ensuring high standards in project execution. EPC remains the preferred model for delivering industrial and infrastructure projects with excellence well into the future."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "substation-tnc",
+  "name": "Substation Testing & Commissioning",
+  "image": "/assets/img/service/tc.jpg",
+  "intro": [
+   "The entire power distribution system has its heart inside the substation, which helps the continuous flow of electricity from generation sources to final consumers. Testing and Commissioning (T&C) of substations is one of the major stages to ensure that all electrical components are safe and perform as per their design and industry standards, in other words, put through its paces before energizing."
+  ],
+  "sections": [
+   {
+    "h": "Services of Substation - T&C",
+    "body": [
+     {
+      "p": "Substation T & C"
+     },
+     {
+      "p": "Transformer Testing"
+     },
+     {
+      "p": "LV and MV Testing"
+     },
+     {
+      "p": "Retrofitting & Testing"
+     },
+     {
+      "p": "OCVB Testing"
+     },
+     {
+      "p": "CT and PT Testing"
+     },
+     {
+      "p": "Transformer Oil Filtration"
+     },
+     {
+      "p": "Bus Duct EPC"
+     },
+     {
+      "p": "Cable Testing"
+     },
+     {
+      "p": "Relay Testing"
+     },
+     {
+      "p": "GIS Testing"
+     },
+     {
+      "p": "E-House Testing"
+     }
+    ]
+   },
+   {
+    "h": "What is Substation T&C ?",
+    "body": [
+     {
+      "p": "Substation Testing and Commissioning (T&C) is an organized method of testing the equipment for performance. In other words, it was put to the test in a fashion that helps to ensure functionality and reliability of the units without equipment failures due to any reason during power interruption."
+     },
+     {
+      "h4": "Importance of Substation T&C"
+     },
+     {
+      "li": [
+       "Ensures System Reliability:"
+      ]
+     },
+     {
+      "p": "Testing and commissioning (T&C) helps detect defects, weaknesses, or improper installations in substation equipment, preventing costly failures and blackouts."
+     },
+     {
+      "li": [
+       "Complies with Safety Standards:"
+      ]
+     },
+     {
+      "p": "Adheres to international norms and safety standards to minimize risks to both personnel and infrastructure."
+     },
+     {
+      "li": [
+       "Eliminates Costly Failures:"
+      ]
+     },
+     {
+      "p": "Early fault detection during commissioning reduces maintenance needs and prevents expensive downtime."
+     },
+     {
+      "li": [
+       "Optimum Efficiency:"
+      ]
+     },
+     {
+      "p": "Fine-tuning and calibrating system components ensures maximum performance, energy efficiency, and system stability."
+     },
+     {
+      "h4": "Key Tests for T&C of Substation"
+     },
+     {
+      "li": [
+       "Primary Equipment Testing:"
+      ]
+     },
+     {
+      "p": "Includes power transformer testing such as insulation resistance, ratio tests, and oil dielectric strength assessments."
+     },
+     {
+      "li": [
+       "Circuit Breaker Testing:"
+      ]
+     },
+     {
+      "p": "Involves checking contact resistance, timing, and insulation integrity to ensure reliable operation."
+     },
+     {
+      "li": [
+       "Current and Voltage Transformer Testing:"
+      ]
+     },
+     {
+      "p": "Conducts ratio, polarity, and insulation tests to verify measurement accuracy and safety."
+     },
+     {
+      "h4": "Functional & Performance Testing"
+     },
+     {
+      "li": [
+       "Interlocking Tests:"
+      ]
+     },
+     {
+      "p": "Identifies potential operational errors and unsafe switching sequences that could lead to hazards or unplanned events."
+     },
+     {
+      "li": [
+       "Load Flow & Stability Tests:"
+      ]
+     },
+     {
+      "p": "Verifies the substation’s ability to meet actual power demand under various conditions."
+     },
+     {
+      "li": [
+       "Emergency Shut-down & Restoration Tests:"
+      ]
+     },
+     {
+      "p": "Assesses system behavior and recovery during unusual or fault scenarios."
+     },
+     {
+      "p": "These processes are the steps to safe, reliable, and efficient delivery of power. A properly tested substation reduces risk, enhances performance, and guarantees long-term operational stability. Proper T&C therefore serves as a backbone infrastructure to utilities, industries, and businesses for achieving grid reliability and ensuring power supply for decades to come."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "material-fabrication-civil",
+  "name": "Fabrication & Civil Work",
+  "image": "/assets/img/service/fb.jpg",
+  "intro": [
+   "Modern-day infrastructure development boils down to more than just EPC (Engineering, Procurement, and Construction) projects. It probably is a very simplistic but effective method of getting work done. In fact, almost every modern day project of any kind has all design, material sourcing, and construction into a single and one-line contract with the cost-effectiveness and efficiency that are mostly associated with a specific industry such as energy, oil &, gas, power generation, and infrastructure."
+  ],
+  "sections": [
+   {
+    "h": "Customized steel fabrication and substations civil works.",
+    "body": [
+     {
+      "h4": "Turnkey Solution"
+     },
+     {
+      "p": "An EPC work delivers completion by handover of the whole ready-to-use facility. Initial design and laying are the responsibilities of the contractor, allowing project owners to keep their focus on operations rather than construction complexity."
+     },
+     {
+      "h4": "Cost & Time Efficiency"
+     },
+     {
+      "p": "With the bundling of engineering, procurement, and construction into one contract, Material & MECH Fabrication & Civil"
+     },
+     {
+      "p": "minimize delays and cost overruns. Because of a single point of responsibility, easy coordination is achieved, thus reducing the risks of fragmented project implementation."
+     },
+     {
+      "h4": "Quality Assurance & Compliance"
+     },
+     {
+      "p": "With a well-structured approach, the EPC contracts demand compliance with international standards and regulations for the projects. The contractor is also responsible for quality control, ensuring that projects achieve compliance with safety and performance benchmarks."
+     },
+     {
+      "h4": "Risk Transfer"
+     },
+     {
+      "p": "The risk of the project is transferred to the contractor under the EPC contract from the owner. This leads the contractor to optimize resources, reduce risks, and deliver projects on time, with no economic or operational risks to stakeholders."
+     },
+     {
+      "h4": "Innovation & Sustainability"
+     },
+     {
+      "p": "Modern Material & MECH Fabrication & Civil"
+     },
+     {
+      "p": "use the latest technologies, ranging from digital twin modeling to AI-driven project management and sustainable engineering practices. Green solutions help to mitigate carbon footprints for a long-term perspective."
+     }
+    ]
+   },
+   {
+    "h": "Application of fabrication and civil works",
+    "body": [
+     {
+      "li": [
+       "Data Centers and Industrial Setups: DC buildings, substations, automobiles, mines, healthcare, and pharma sectors",
+       "Oil & Gas: Refineries, pipelines, and offshore platforms",
+       "Power Generation: Renewable energy plants, thermal power stations, and substations",
+       "Infrastructure Development: Metro rail, roads, process plants, airports, and water treatment plants"
+      ]
+     },
+     {
+      "p": "EPC, or Engineering Procurement Construction, is a structured methodology to develop large-scale industrial and infrastructure projects efficiently while containing risk. This single-source responsibility model provides operational efficiency and cost savings while ensuring high standards in project execution. EPC remains the preferred model for delivering industrial and infrastructure projects with excellence well into the future."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "gis-supervision",
+  "name": "GIS Erection & Supervision",
+  "image": "/assets/img/service/gis.jpg",
+  "intro": [
+   "Gas Insulated Substations (GIS) have cleared the paths that were barricading modern power systems by offering compact, reliable, and high-performance solutions for electrical distribution. And it is the learned head and leadership that is behind the successful execution of GIS projects, installation, testing, and commissioning that needs expert supervision."
+  ],
+  "sections": [
+   {
+    "h": "Why GIS Erection & Supervision is Important?",
+    "body": [
+     {
+      "p": "GIS technology employs a sealed, gas-insulated environment to integrate the high voltage components in a minimal space availability with much more of assurance reliability. Correctly directed and supervised, every phase involved in a GIS project; be it design, installation, testing or commissioning, agrees with international standards and safety regulations."
+     },
+     {
+      "h4": "Key Benefits of GIS Erection & Supervision"
+     },
+     {
+      "li": [
+       "✔ Flawless Execution: Accurate assembly, alignment, and installation of GIS components to ensure seamless operation.",
+       "✔ Safety & Compliance: Adherence to strict safety protocols and regulatory standards to eliminate hazards.",
+       "✔ Quality Assurance: In-depth inspections and testing to guarantee high performance and efficiency.",
+       "✔ Timely Completion of Projects: Projects executed promptly and professionally by skilled experts.",
+       "✔ Optimal Performance: Achieves peak system reliability with minimal maintenance and negligible downtime."
+      ]
+     },
+     {
+      "h4": "Key Elements in GIS Erection & Supervision"
+     },
+     {
+      "li": [
+       "Installation Supervision: Oversees spatial positioning and assembly of GIS modules, precise SF6 gas filling and leakage detection, as well as cable terminations and busbar connections.",
+       "Testing & Commissioning Supervision: Manages insulation resistance, contact resistance, and high-voltage withstand tests; ensures accurate relay protection coordination and supervises SCADA integration for real-time monitoring.",
+       "Quality & Safety Compliance: Ensures adherence to IEC, IEEE, and utility-specific GIS standards; performs risk assessments, safety audits, and promotes best practices in SF6 gas handling and environmental safety.",
+       "Performance Optimization & Handover: Fine-tunes GIS systems for peak efficiency, provides training to operators and maintenance teams, and ensures a smooth handover through comprehensive documentation and reporting."
+      ]
+     },
+     {
+      "p": "Modern substations are going to fully depend on effective GIS direction and supervision for their successful deployment. Precision, compliance, and performance optimization ensure that expert supervision makes the GIS installations more reliable and longer lasting. All that meticulous supervision does would be the cutting edge towards a seamless power distribution, minimal maintenance, and stable operational lifetime with today's high-voltage networks across industries and utilities."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "solar-ev-station",
+  "name": "Solar & EV Station",
+  "image": "/assets/img/service/solar.jpg",
+  "intro": [
+   "As the world moves toward a cleaner future with energy conservation, solar energy along with EV charging will take the lead. Solar energy with electric vehicle (EV) charging stations is the very innovative concept of using one's energy, saving costs, and being green. Solar power and electric vehicle charging stations, as such, comprise renewable energies for charging electric vehicles. Such types of systems reduce reduction in dependence on fossil fuels for charging and because of their deployment in households help reduce carbon footprint on the whole. Integrated or synergistic approaches in between solar photovoltaic (PV) technology and EV-related infrastructure revolved resourcefully about both transport and energy fields."
+  ],
+  "sections": [
+   {
+    "h": "Advantages of Solar-Powered EV Charging Stations",
+    "body": [
+     {
+      "li": [
+       "✔ Clean and Renewable Energy: Produces no emissions or environmental harm, helping combat climate change and preserve natural resources.",
+       "✔ Cost Reduction: Minimal maintenance costs and free energy generation from solar power.",
+       "✔ Energy Independence: Less reliance on the grid—ideal for remote or off-grid applications.",
+       "✔ Sustainable Infrastructure: Supports green mobility and contributes to a greener planet.",
+       "✔ Smart and Efficient: Integrates with battery storage and smart grids to optimize energy use."
+      ]
+     },
+     {
+      "h4": "Components of Solar and EV Stations"
+     },
+     {
+      "li": [
+       "Solar Power Generation: High-efficiency solar panels convert sunlight into reliable electrical energy.",
+       "Sustainable Infrastructure: Promotes eco-friendly mobility solutions, contributing to a greener planet.",
+       "Smart & Efficient: Integrates battery storage and smart grids to maximize energy optimization and usage."
+      ]
+     },
+     {
+      "h4": "Solar and Electric Motor Vehicle Station Components"
+     },
+     {
+      "p": "Solar Power Production: High efficiency solar panels convert sunlight into electrical energy. Cutting edge inverters optimize electricity conversion for charging by electric vehicles. Battery storage systems assure availability of energy even during very low sunlight."
+     },
+     {
+      "h4": "EV Charging Infrastructure"
+     },
+     {
+      "li": [
+       "High-Speed & Ultra-Fast Chargers: Significantly reduce charging times by converting current to DC fast-charging levels. Smart Charging Management enables load balancing and real-time energy flow monitoring.",
+       "Vehicle-to-Grid (V2G) Technology: Enables electric vehicles to integrate with power systems by sending excess electricity back to the grid, supporting energy sustainability and grid stability."
+      ]
+     },
+     {
+      "h4": "Sustainability & Smart Technology"
+     },
+     {
+      "li": [
+       "AI & IoT Integration: Enables remote monitoring and predictive maintenance for enhanced system performance.",
+       "Solar Canopies: Provide both shade and energy generation at urban EV charging hubs, maximizing space utility.",
+       "Net Metering: Routes excess solar energy back to the grid, generating additional revenue and reducing energy costs."
+      ]
+     }
+    ]
+   },
+   {
+    "h": "Future of Solar and EV Stations",
+    "body": [
+     {
+      "p": "The future promises to be very bright for solar EV charging with the use of mass penetration of electric vehicles in tandem with new technology in solar. Clean, self-sustaining solutions will soon pave the way into the zero-emission future cities, businesses, and individuals are already looking toward."
+     }
+    ]
+   },
+   {
+    "h": "Conclusion",
+    "body": [
+     {
+      "p": "The best, efficient, cost-effective, and environment-friendly combination of solar Energy and electrical charging station are in need of ours."
+     },
+     {
+      "p": "We have experience in solar and EV Station work across pan-India."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "trading",
+  "name": "Trading",
+  "image": "/assets/img/service/tr.jpg",
+  "intro": [
+   "Modern-day infrastructure development boils down to more than just EPC (Engineering, Procurement, and Construction) projects. It probably is a very simplistic but effective method of getting work done. In fact, almost every modern day project of any kind has all design, material sourcing, and construction into a single and one-line contract with the cost-effectiveness and efficiency that are mostly associated with a specific industry such as energy, oil &, gas, power generation, and infrastructure."
+  ],
+  "sections": [
+   {
+    "h": "Why Trading Shine",
+    "body": [
+     {
+      "h4": "Turnkey Solution"
+     },
+     {
+      "p": "An EPC work delivers completion by handover of the whole ready-to-use facility. Initial design and laying are the responsibilities of the contractor, allowing project owners to keep their focus on operations rather than construction complexity."
+     },
+     {
+      "h4": "Cost & Time Efficiency"
+     },
+     {
+      "p": "With the bundling of engineering, procurement, and construction into one contract, Trading minimize delays and cost overruns. Because of a single point of responsibility, easy coordination is achieved, thus reducing the risks of fragmented project implementation."
+     },
+     {
+      "h4": "Quality Assurance & Compliance"
+     },
+     {
+      "p": "With a well-structured approach, the EPC contracts demand compliance with international standards and regulations for the projects. The contractor is also responsible for quality control, ensuring that projects achieve compliance with safety and performance benchmarks."
+     },
+     {
+      "h4": "Risk Transfer"
+     },
+     {
+      "p": "The risk of the project is transferred to the contractor under the EPC contract from the owner. This leads the contractor to optimize resources, reduce risks, and deliver projects on time, with no economic or operational risks to stakeholders."
+     },
+     {
+      "h4": "Innovation & Sustainability"
+     },
+     {
+      "p": "Modern Trading use the latest technologies, ranging from digital twin modeling to AI-driven project management and sustainable engineering practices. Green solutions help to mitigate carbon footprints for a long-term perspective."
+     }
+    ]
+   },
+   {
+    "h": "Where Trading Are Applied",
+    "body": [
+     {
+      "li": [
+       "Data Centers and Industrial Setups: DC buildings, substations, automobiles, mines, healthcare, and pharma sectors",
+       "Oil & Gas: Refineries, pipelines, and offshore platforms",
+       "Power Generation: Renewable energy plants, thermal power stations, and substations",
+       "Infrastructure Development: Metro rail, roads, process plants, airports, and water treatment plants"
+      ]
+     },
+     {
+      "p": "EPC, or Engineering Procurement Construction, is a structured methodology to develop large-scale industrial and infrastructure projects efficiently while containing risk. This single-source responsibility model provides operational efficiency and cost savings while ensuring high standards in project execution. EPC remains the preferred model for delivering industrial and infrastructure projects with excellence well into the future."
+     }
+    ]
+   }
+  ]
+ }
+]
